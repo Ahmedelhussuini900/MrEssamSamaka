@@ -1,66 +1,175 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# منصة الأستاذ عصام سماكة التعليمية
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+منصة تعليمية شاملة لإدارة الدروس والشهور والصفوف والوصول للمستخدمين.
 
-## About Laravel
+## نظرة عامة على النظام
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+تم تصميم هذه المنصة لإدارة المحتوى التعليمي مع الميزات الرئيسية التالية:
+- تنظيم الدروس الشهرية
+- إدارة محتوى الفيديو
+- تكامل نظام الامتحانات
+- التحكم في وصول المستخدمين من خلال كلمات المرور
+- إدارة المستخدمين حسب الصفوف
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## وصف الموقع
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+منصة الأستاذ عصام سماكة هي نظام تعليمي متكامل يهدف إلى تسهيل عملية التعليم عن بعد وإدارة المحتوى التعليمي. المنصة مصممة خصيصاً لتلبية احتياجات الطلاب والمعلمين في بيئة تعليمية منظمة وفعالة.
 
-## Learning Laravel
+### المميزات الرئيسية:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+1. **إدارة المحتوى التعليمي**:
+   - تنظيم الدروس حسب الشهور الدراسية
+   - رفع وإدارة مقاطع الفيديو التعليمية
+   - تحديد الدروس المميزة والمحتوى المدفوع
+   - تتبع مشاهدات وتحميلات المحتوى
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+2. **نظام الامتحانات**:
+   - إمكانية إضافة امتحانات لكل درس
+   - تحديد مدة الامتحان ودرجة النجاح
+   - إدارة عدد المحاولات المسموح بها
+   - تتبع نتائج الطلاب
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+3. **إدارة المستخدمين**:
+   - تسجيل وإدارة الطلاب
+   - تنظيم الطلاب حسب الصفوف الدراسية
+   - تتبع نشاط المستخدمين
+   - إدارة صلاحيات الوصول
 
-## Laravel Sponsors
+4. **نظام الوصول**:
+   - التحكم في الوصول من خلال كلمات مرور
+   - ربط كلمات المرور بشهور محددة
+   - تتبع استخدام كلمات المرور
+   - إدارة صلاحية كلمات المرور
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+5. **التحليلات والإحصائيات**:
+   - تتبع عدد المشاهدات
+   - تتبع التحميلات
+   - نظام تقييم المحتوى
+   - قياس تفاعل المستخدمين
 
-### Premium Partners
+## هيكل قاعدة البيانات
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### الكيانات الأساسية
 
-## Contributing
+1. **المستخدمين**
+   - معلومات الطلاب
+   - ربط بالصفوف
+   - تتبع الوصول
+   - المصادقة
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+2. **الصفوف**
+   - المستويات التعليمية
+   - تجميع الطلاب
+   - إدارة الترتيب
 
-## Code of Conduct
+3. **الشهور**
+   - الفترات الدراسية
+   - تنظيم الدروس
+   - التحكم في الوصول بكلمات المرور
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+4. **الدروس**
+   - محتوى الفيديو
+   - تكامل الامتحانات
+   - علامات المحتوى المدفوع
+   - تتبع المشاهدات
+   - نظام التقييم
 
-## Security Vulnerabilities
+5. **كلمات المرور**
+   - التحكم في الوصول
+   - ربط بالشهور
+   - تتبع الاستخدام
+   - إدارة الصلاحية
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### العلاقات
 
-## License
+```mermaid
+erDiagram
+    USERS ||--o{ PASSWORDS : uses
+    USERS }|--|| GRADES : belongs_to
+    PASSWORDS ||--o{ PASSWORD_MONTHS : has
+    MONTHS ||--o{ PASSWORD_MONTHS : has
+    MONTHS ||--o{ LESSONS : contains
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## المميزات
+
+### إدارة المستخدمين
+- تسجيل ومصادقة المستخدمين
+- تنظيم المستخدمين حسب الصفوف
+- التحكم في الوصول من خلال كلمات المرور
+- تتبع نشاط المستخدمين
+
+### إدارة المحتوى
+- تنظيم الدروس الشهرية
+- استضافة محتوى الفيديو
+- علامات المحتوى المدفوع
+- تمييز المحتوى المميز
+- ترتيب وفرز المحتوى
+
+### نظام الامتحانات
+- وظائف امتحان متكاملة
+- مدة امتحان قابلة للتكوين
+- متطلبات درجة النجاح
+- إدارة المحاولات المتعددة
+- إدارة الأسئلة
+
+### التحكم في الوصول
+- الوصول القائم على كلمات المرور
+- الوصول المحدد للشهر
+- انتهاء صلاحية كلمة المرور
+- تتبع الاستخدام
+- حالة النشاط/عدم النشاط
+
+### التحليلات
+- عد المشاهدات
+- تتبع التحميلات
+- نظام التقييم
+- مقاييس تفاعل المستخدمين
+
+
+## التثبيت
+
+1. استنساخ المستودع:
+```bash
+git clone https://github.com/Ahmedelhussuini900/MrEssamSamaka.git
+```
+
+2. تثبيت التبعيات:
+```bash
+composer install
+```
+`
+
+## الاستخدام
+
+### إدارة المستخدمين
+- إنشاء مستخدمين مع ربطهم بالصفوف
+- إدارة وصول المستخدمين من خلال كلمات المرور
+- تتبع نشاط وتفاعل المستخدمين
+
+### إدارة المحتوى
+1. إنشاء شهور لتنظيم المحتوى
+2. إضافة دروس إلى شهور محددة
+3. تكوين محتوى الفيديو والخيارات
+4. إعداد الامتحانات إذا لزم الأمر
+5. إدارة الوصول من خلال كلمات المرور
+
+### التحكم في الوصول
+1. إنشاء كلمات مرور لشهور محددة
+2. تعيين كلمات المرور للمستخدمين
+3. تتبع استخدام وانتهاء صلاحية كلمات المرور
+4. إدارة حالة النشاط/عدم النشاط
+
+## المساهمة
+
+1. تفرع المستودع
+2. إنشاء فرع الميزة الخاصة بك
+3. التزام تغييراتك
+4. دفع إلى الفرع
+5. إنشاء طلب سحب
+
+
+## الاتصال
+
+- **المطور**: أحمد الحسيني
+- **البريد الإلكتروني**: [Ahmedelhussini1200@gmail.com or whatsapp 01099042793]

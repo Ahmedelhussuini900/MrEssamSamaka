@@ -6,11 +6,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable, SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -21,6 +23,10 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'grade_id',
+        'phone',
+        'is_active',
+        'last_login_at'
     ];
 
     /**
@@ -42,7 +48,27 @@ class User extends Authenticatable
     {
         return [
             'email_verified_at' => 'datetime',
+            'last_login_at' => 'datetime',
+            'is_active' => 'boolean',
             'password' => 'hashed',
         ];
+    }
+
+    // Relationship with Grade
+    public function grade()
+    {
+        return $this->belongsTo(Grade::class);
+    }
+
+    // Relationship with used passwords
+    public function usedPasswords()
+    {
+        return $this->hasMany(Password::class, 'used_by');
+    }
+
+    // Scope for active users
+    public function scopeActive($query)
+    {
+        return $query->where('is_active', true);
     }
 }
