@@ -127,20 +127,6 @@ erDiagram
 - مقاييس تفاعل المستخدمين
 
 
-## التثبيت
-
-1. استنساخ المستودع:
-```bash
-git clone https://github.com/Ahmedelhussuini900/MrEssamSamaka.git
-```
-
-2. تثبيت التبعيات:
-```bash
-composer install
-```
-`
-
-## الاستخدام
 
 ### إدارة المستخدمين
 - إنشاء مستخدمين مع ربطهم بالصفوف
